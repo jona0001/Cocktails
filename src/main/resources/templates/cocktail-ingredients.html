@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html xmlns:th="https://www.thymeleaf.org" lang="">
+<head>
+    <meta charset="UTF-8">
+    <title>Cocktail List</title>
+    <link rel="style2" th:href="@{/css/main.css}">
+</head>
+<body>
+<div class="container mt-4">
+    <!-- Cocktail List Section -->
+    <section>
+        <h1>All Cocktails in a List</h1>
+        <ul class="list-group">
+            <li class="list-group-item" th:each="cocktail : ${cocktails}">
+                <h5 th:text="${cocktail.getName()}"></h5>
+                <p th:text="${cocktail.getIngredients()}"></p>
+            </li>
+        </ul>
+    </section>
+
+    <!-- Search Form Section -->
+    <section class="mt-4">
+        <h1>Search by Ingredients</h1>
+        <form action="/search" method="get" class="form-inline">
+            <div class="mb-3">
+                <label for="ingredient" class="form-label">Ingredient:</label>
+                <input type="text" id="ingredient" name="ingredient" class="form-control" placeholder="Type one ingredient"
+                       th:value="${ingredient}">
+            </div>
+            <button type="submit" class="btn btn-primary">Search</button>
+        </form>
+    </section>
+</div>
+</body>
+</html>

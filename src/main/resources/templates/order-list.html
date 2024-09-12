@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html xmlns:th="https://www.thymeleaf.org" lang="">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>cocktail orders</h1>
+<ul>
+    <li th:each="order : ${orders}">
+        <strong th:text="${order.cocktailMenu.displayName}"></strong> with
+        <strong th:text="${order.cocktailType.displayName}"></strong> type,
+        Strength:<strong th:text="${order.cocktailStrength.displayName}"></strong>
+
+    </li>
+</ul>
+<a th:href="@{/order}">Place another order</a>
+</body>
+</html>
