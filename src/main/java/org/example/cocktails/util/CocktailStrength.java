@@ -1,12 +1,11 @@
-package org.example.cocktails;
-public enum CocktailType {
-    CLASSIC ("Classic"),
-    MOCKTAIL ("Mocktail");
-
+package org.example.cocktails.util;
+public enum CocktailStrength {
+    SINGLE("Single"),
+    DOUBLE("Double");
 
     private String displayName;
 
-    CocktailType(String displayName) {
+    CocktailStrength(String displayName) {
         this.displayName = displayName;
     }
 

@@ -1,9 +1,11 @@
-package org.example.cocktails;
+package org.example.cocktails.model;
+
+import org.example.cocktails.util.CocktailStrength;
+import org.example.cocktails.util.CocktailType;
 
 import java.util.UUID;
 
 public class CocktailOrder {
-    private CocktailMenu cocktailMenu;
     private CocktailType cocktailType;
     private CocktailStrength cocktailStrength;
     private UUID id;
@@ -11,13 +13,7 @@ public class CocktailOrder {
     public CocktailOrder() {
     }
 
-    public CocktailMenu getCocktailMenu() {
-        return cocktailMenu;
-    }
 
-    public void setCocktailMenu(CocktailMenu cocktailMenu) {
-        this.cocktailMenu = cocktailMenu;
-    }
 
     public CocktailType getCocktailType() {
         return cocktailType;
