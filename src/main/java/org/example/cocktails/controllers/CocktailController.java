@@ -16,6 +16,8 @@ import java.util.List;
 public class CocktailController {
     private final CocktailService cocktailService;
 
+
+    //dependency injection.
     public CocktailController(CocktailService cocktailService) {
         this.cocktailService = cocktailService;
     }
@@ -29,8 +31,9 @@ public class CocktailController {
     public String addCocktailForm(Model model){
         Cocktail cocktail = new Cocktail();
         model.addAttribute("cocktail",cocktail);
-
+        //model object for our HTML, key-value pair
         return "addCocktail";
+
     }
 
     @PostMapping("/save")
