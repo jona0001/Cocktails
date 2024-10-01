@@ -4,37 +4,32 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta charset="UTF-8">
     <title>add-Cocktail</title>
+    <link rel="stylesheet" href="/style/add-cocktail-style.css">
 </head>
 <body>
 
-<header>
-    <h4>add cocktail cocktails</h4>
-</header>
+<form th:object="${cocktail}" th:action="@{/save/save}" method="post">
+    <header>
+        <h1>add cocktails to database</h1>
+    </header>
 
-<div id="myForm">
-    <form th:object="${cocktail}" th:action="@{/save/save}" method="post">
+    <label for="cocktail">Enter Cocktail</label>
+    <input type="text" id="cocktail" name="name">
 
-        <label for="cocktail">Enter Cocktail</label>
-        <input type="text" id="cocktail" name="name">
+    <label for="description">Enter Description</label>
+    <input type="text" id="description" name="description">
 
-        <label for="description">Enter Description</label>
-        <input type="text" id="description" name="description">
+    <label for="ingredients">Enter Ingredients</label>
+    <input type="text" id="ingredients" name="ingredients">
 
-        <label for="ingredients">Enter Ingredients</label>
-        <input type="text" id="ingredients" name="ingredients">
+    <label for="price">Enter price</label>
+    <input type="number" id="price" name="price">
 
-        <label for="price">Enter price</label>
-        <input type="number" id="price" name="price">
+    <div class="button-group">
+        <button type="submit">Submit</button>
+    </div>
 
-        <div class="button-group">
-            <button type="submit">Submit</button>
-        </div>
-
-    </form>
-</div>
-
-
-
+</form>
 
 
 </body>

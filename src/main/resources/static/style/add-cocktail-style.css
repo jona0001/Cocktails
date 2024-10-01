@@ -1,0 +1,32 @@
+body{
+    background-size: cover;
+    background: url("/static/images/millionaire.jpg") no-repeat center;
+}
+
+form{
+    width: 800px; /* Set a fixed width for the form */
+    height: 400px;
+    margin:50px auto 0 auto; /* Center the form horizontally */
+    padding: 40px;
+    border: 3px solid #ccc;
+    background-color: lightgray;
+    border-radius: 5px; /* Rounded corners */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+
+}
+
+form input, form textarea, form button {
+    width: 100%; /* Make inputs, textarea, and button take full width */
+    padding: 10px; /* Add some padding */
+    margin-bottom: 10px; /* Space between elements */
+    border: 1px solid #ccc; /* Light grey border */
+    border-radius: 3px; /* Slightly rounded corners */
+}
+
+form button {
+    width: 10%;
+    background-color: green;
+    color: white;
+    border: none;
+    margin: auto;
+}

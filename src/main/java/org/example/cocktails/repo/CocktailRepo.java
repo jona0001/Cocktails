@@ -9,7 +9,7 @@ import org.springframework.stereotype.Repository;
 public class CocktailRepo {
 
     @Autowired
-    private JdbcTemplate jdbcTemplate = new JdbcTemplate();
+    private JdbcTemplate jdbcTemplate;
 
     @Autowired
     public CocktailRepo(JdbcTemplate jdbcTemplate) {
@@ -20,8 +20,6 @@ public class CocktailRepo {
         String query = "INSERT INTO cocktail (Name, Description, Ingredients, Price) VALUES (?, ?, ?, ?)";
         jdbcTemplate.update(query, cocktail.getName(), cocktail.getDescription(), cocktail.getIngredients(), cocktail.getPrice());
         return cocktail;
-
-
     }
 
 
