@@ -1,6 +1,6 @@
 body{
     background-size: cover;
-    background: url("/static/images/millionaire.jpg") no-repeat center;
+    background-image: url("/static/images/wallpaper.png");
 }
 
 form{

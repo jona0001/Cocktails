@@ -10,9 +10,6 @@ public class Cocktail {
     private String ingredients;
     private int price;
 
-
-
-
     public Cocktail(String name, String description, String ingredients, int price) {
         this.name = name;
         this.description = description;
